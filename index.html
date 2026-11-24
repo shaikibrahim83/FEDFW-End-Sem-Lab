@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Form</title>
+<style>
+body {
+    text-align: center;
+    font-family: Arial;
+}
+.box {
+    border: 1px solid black;
+    width: 300px;
+    margin: 150px auto;
+    padding: 20px;
+}
+input {
+    padding: 8px;
+    margin: 8px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Login Form</h2>
+
+<label>Email:</label>
+<input type="email" id="email" placeholder="Enter Email"><br>
+
+<label>Password:</label>
+<input type="password" id="pass" placeholder="Enter Password"><br>
+
+<button onclick="login()">Submit</button>
+
+<p id="result"></p>
+</div>
+
+<script>
+function login() {
+    var e = document.getElementById("email").value;
+    var p = document.getElementById("pass").value;
+
+    if(e == "admin@gmail.com" && p == "1234")
+        document.getElementById("result").innerHTML = "Login Successful";
+    else
+        document.getElementById("result").innerHTML = "Invalid email or Password";
+}
+</script>
+
+</body>
+</html>
